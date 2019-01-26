@@ -146,7 +146,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -201,7 +201,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -486,7 +486,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -617,7 +617,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -871,7 +871,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -976,7 +976,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1239,7 +1239,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -1398,7 +1398,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -1696,7 +1696,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -1812,7 +1812,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -2047,7 +2047,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -2439,7 +2439,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -2648,7 +2648,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -2779,7 +2779,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -2997,7 +2997,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -3117,7 +3117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3193,7 +3193,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -3539,7 +3539,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -3680,7 +3680,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -3859,7 +3859,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -4204,7 +4204,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4346,7 +4346,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -5172,7 +5172,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -5284,7 +5284,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -5407,7 +5407,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -5551,7 +5551,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5657,7 +5657,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6135,7 +6135,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6190,7 +6190,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6499,7 +6499,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -6606,7 +6606,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -6749,7 +6749,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6831,7 +6831,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -6968,7 +6968,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -7157,7 +7157,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -7485,7 +7485,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114755900175185616, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
@@ -7617,7 +7617,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -8106,7 +8106,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -8222,7 +8222,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -8348,7 +8348,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -8510,7 +8510,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8565,7 +8565,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8647,7 +8647,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name
@@ -8758,7 +8758,7 @@ Prefab:
     - target: {fileID: 212607095749334446, guid: 7701fad8d46f01b4aa8319dfeb181241,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365209695337336, guid: 7701fad8d46f01b4aa8319dfeb181241, type: 2}
       propertyPath: m_Name

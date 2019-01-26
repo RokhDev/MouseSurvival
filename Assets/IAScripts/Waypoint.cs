@@ -34,7 +34,9 @@ public class Waypoint : MonoBehaviour {
             {
                 wp.adjacents[k] = adjacentWaypoints.Pop().GetComponent<Waypoint>();
             }
+#if UNITY_EDITOR
             UnityEditor.EditorUtility.SetDirty(wp);
+#endif
         }
     }
 
