@@ -24,6 +24,12 @@ public class FoodCount : MonoBehaviour
 
     void Update()
     {
+        RefreshCount();
+        CheckVictory();
+    }
+
+    void RefreshCount()
+    {
         loopFound = 0;
         for (int i = 0; i < findCheese.Length; i++)
         {
@@ -33,6 +39,9 @@ public class FoodCount : MonoBehaviour
             }
         }
         foodFound = loopFound;
+    }
+    void CheckVictory()
+    {
         if (foodFound <= 0)
         {
             Debug.Log("Victory");
