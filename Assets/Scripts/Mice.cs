@@ -9,6 +9,7 @@ public class Mice : MonoBehaviour
     int x;
     int y;
     const int playerSpeed = 5;
+    int foodCount;
 
     void Start()
     {
@@ -16,12 +17,14 @@ public class Mice : MonoBehaviour
         movementVector = new Vector3();
         x = 0;
         y = 0;
+        foodCount = 0;
     }
 
     void Update()
     {
         PlayerMove();
     }
+
     public void PlayerMove()
     {
         x = 0;
@@ -49,5 +52,27 @@ public class Mice : MonoBehaviour
         movementVector.x = x;
         movementVector.y = y;
         playerTransform.position += movementVector * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Cheese")
+        {
+            foodCount += 1;
+            other.enabled = false;
+            other.gameObject.SetActive(false);
+            Debug.Log("Food Count = " + foodCount);
+        }
+
+        if (other.tag == "Home")
+        {
+            if (foodCount != 0)
+            {
+                other.gameObject.GetComponent<Home>().SumScore(foodCount);
+                foodCount = 0;
+                Debug.Log("Food Count = " + foodCount);
+                Debug.Log("Total Score = " + other.gameObject.GetComponent<Home>().GetScore());
+            }
+        }
     }
 }
