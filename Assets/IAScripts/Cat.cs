@@ -15,7 +15,8 @@ public class Cat : MonoBehaviour {
     public LayerMask mouseLayer;
     public LayerMask obstacleLayer;
     public float patrolSpeed;
-    public float chasingSpeed;
+    public float maxSpeed;
+    public float acceleration;
     public float idleTime;
     public float searchTimeout;
     public float viewDistance;
@@ -24,6 +25,7 @@ public class Cat : MonoBehaviour {
     public float playerProximityTreshold;
 
     private States state;
+    private float chasingSpeed;
     private Waypoint currentTgtWaypoint;
     private float idleTimer = 0;
     private float searchTimer = 0;
@@ -35,6 +37,7 @@ public class Cat : MonoBehaviour {
     private void Start()
     {
         currentTgtWaypoint = FindClosest();
+        chasingSpeed = patrolSpeed;
     }
 
     private void Update()
@@ -58,6 +61,7 @@ public class Cat : MonoBehaviour {
             if (PlayerInSight())
             {
                 state = States.Chasing;
+                chasingSpeed = patrolSpeed;
             }
 
         }
@@ -77,10 +81,15 @@ public class Cat : MonoBehaviour {
             if (PlayerInSight())
             {
                 state = States.Chasing;
+                chasingSpeed = patrolSpeed;
             }
         }
         else if(state == States.Chasing)
         {
+            chasingSpeed += acceleration * Time.deltaTime;
+
+            CheckPlayerProximity();
+
             if (PlayerInSight())
             {
                 if(Vector3.Distance(transform.position, player.transform.position) > playerProximityTreshold)
@@ -94,6 +103,8 @@ public class Cat : MonoBehaviour {
         }
         else if(state == States.Searching)
         {
+            chasingSpeed += acceleration * Time.deltaTime;
+
             if(Vector3.Distance(transform.position, playerLastPosition) > searchProximityTreshold)
             {
                 MoveTowardsPlayerLastPosition();
@@ -184,6 +195,15 @@ public class Cat : MonoBehaviour {
         transform.position = Vector3.MoveTowards(transform.position, playerLastPosition, chasingSpeed * Time.deltaTime);
         direction = transform.position - prevPos;
         direction.Normalize();
+    }
+
+    private void CheckPlayerProximity()
+    {
+        float proximity = Vector3.Distance(transform.position, player.transform.position);
+        if (proximity <= playerProximityTreshold)
+        {
+            Debug.Log("You lose");
+        }
     }
 
     private bool MouseOnSight()
