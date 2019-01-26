@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Waypoint
   - Obstacle
+  - Home
+  - Mice
+  - Cheese
   layers:
   - Default
   - TransparentFX
