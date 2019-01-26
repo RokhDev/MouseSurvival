@@ -42,6 +42,10 @@ public class FoodCount : MonoBehaviour
         }
         foodFound = loopFound;
     }*/
+    public int GetFoodFound()
+    {
+        return foodFound;
+    }
     void CheckVictory()
     {
         if (findHome.GetComponent<Home>().GetScore() >= foodFound)
