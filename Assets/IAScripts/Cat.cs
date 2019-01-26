@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cat : MonoBehaviour {
     
@@ -202,7 +203,7 @@ public class Cat : MonoBehaviour {
         float proximity = Vector3.Distance(transform.position, player.transform.position);
         if (proximity <= playerProximityTreshold)
         {
-            Debug.Log("You lose");
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FoodCount : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class FoodCount : MonoBehaviour
     {
         if (findHome.GetComponent<Home>().GetScore() >= foodFound)
         {
-            Debug.Log("Victory");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }

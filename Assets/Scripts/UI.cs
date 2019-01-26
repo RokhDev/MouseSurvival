@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
     Canvas canvas;
     GameObject home;
-    // Text myText;
+    //Text myText;
     void Start()
     {
         canvas = GetComponent<Canvas>();
