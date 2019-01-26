@@ -9,6 +9,7 @@ TagManager:
   - Home
   - Mice
   - Cheese
+  - FoodCount
   layers:
   - Default
   - TransparentFX

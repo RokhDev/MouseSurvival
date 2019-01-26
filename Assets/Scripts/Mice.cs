@@ -54,6 +54,11 @@ public class Mice : MonoBehaviour
         playerTransform.position += movementVector * Time.deltaTime;
     }
 
+    public int GetFoodCount()
+    {
+        return foodCount;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Cheese")
