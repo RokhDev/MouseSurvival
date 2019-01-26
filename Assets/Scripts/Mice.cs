@@ -8,7 +8,7 @@ public class Mice : MonoBehaviour
     Vector3 movementVector;
     int x;
     int y;
-    const int playerSpeed = 5;
+    const int playerSpeed = 3;
     int foodCount;
 
     void Start()
@@ -54,7 +54,7 @@ public class Mice : MonoBehaviour
         playerTransform.position += movementVector * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Cheese")
         {

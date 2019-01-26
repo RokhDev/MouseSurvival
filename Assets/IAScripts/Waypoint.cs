@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Waypoint : MonoBehaviour {
-
+    
     public Waypoint[] adjacents;
     public LayerMask layerMask;
 
@@ -34,6 +34,7 @@ public class Waypoint : MonoBehaviour {
             {
                 wp.adjacents[k] = adjacentWaypoints.Pop().GetComponent<Waypoint>();
             }
+            UnityEditor.EditorUtility.SetDirty(wp);
         }
     }
 

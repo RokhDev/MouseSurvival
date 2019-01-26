@@ -8,6 +8,6 @@ public class Globals : MonoBehaviour {
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Mice");
     }
 }
