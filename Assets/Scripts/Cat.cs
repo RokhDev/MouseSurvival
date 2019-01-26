@@ -17,11 +17,20 @@ public class Cat : MonoBehaviour {
     public float patrolSpeed;
     public float chasingSpeed;
     public float idleTime;
+    public float searchTimeout;
+    public float viewDistance;
     public float wpProximityTreshold;
+    public float searchProximityTreshold;
+    public float playerProximityTreshold;
 
     private States state;
     private Waypoint currentTgtWaypoint;
     private float idleTimer = 0;
+    private float searchTimer = 0;
+    private GameObject player;
+    private Vector3 prevPos;
+    private Vector3 direction;
+    private Vector3 playerLastPosition;
 
     private void Start()
     {
@@ -30,12 +39,14 @@ public class Cat : MonoBehaviour {
 
     private void Update()
     {
+        if (!player)
+        {
+            player = Globals.player;
+        }
+
         if(state == States.Patroling)
         {
-            Vector3 prevPos = transform.position;
-            transform.position = Vector3.MoveTowards(transform.position, currentTgtWaypoint.transform.position, patrolSpeed * Time.deltaTime);
-            Vector3 direction = transform.position - prevPos;
-            direction.Normalize();
+            MoveTowardsWaypoint();
 
             float distanceToTgtWp = Vector3.Distance(transform.position, currentTgtWaypoint.transform.position);
             if(distanceToTgtWp <= wpProximityTreshold)
@@ -43,6 +54,12 @@ public class Cat : MonoBehaviour {
                 state = States.Idle;
                 idleTimer = idleTime;
             }
+
+            if (PlayerInSight())
+            {
+                state = States.Chasing;
+            }
+
         }
         else if(state == States.Idle)
         {
@@ -56,14 +73,45 @@ public class Cat : MonoBehaviour {
                 currentTgtWaypoint = currentTgtWaypoint.adjacents[picker];
                 state = States.Patroling;
             }
+
+            if (PlayerInSight())
+            {
+                state = States.Chasing;
+            }
         }
         else if(state == States.Chasing)
         {
-
+            if (PlayerInSight())
+            {
+                if(Vector3.Distance(transform.position, player.transform.position) > playerProximityTreshold)
+                    MoveTowardsPlayer();
+            }
+            else
+            {
+                searchTimer = searchTimeout;
+                state = States.Searching;
+            }
         }
         else if(state == States.Searching)
         {
+            if(Vector3.Distance(transform.position, playerLastPosition) > searchProximityTreshold)
+            {
+                MoveTowardsPlayerLastPosition();
+            }
+            else
+            {
+                searchTimer -= Time.deltaTime;
+                if(searchTimer <= 0)
+                {
+                    currentTgtWaypoint = FindClosest();
+                    state = States.Patroling;
+                }
+            }
 
+            if (PlayerInSight())
+            {
+                state = States.Chasing;
+            }
         }
     }
 
@@ -98,6 +146,44 @@ public class Cat : MonoBehaviour {
             }
         }
         return closest;
+    }
+
+    private bool PlayerInSight()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (distanceToPlayer > viewDistance)
+            return false;
+
+        RaycastHit2D[] hit = Physics2D.LinecastAll(transform.position, player.transform.position, obstacleLayer);
+        if (hit.Length > 0)
+            return false;
+
+        return true;
+    }
+
+    private void MoveTowardsWaypoint()
+    {
+        prevPos = transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, currentTgtWaypoint.transform.position, patrolSpeed * Time.deltaTime);
+        direction = transform.position - prevPos;
+        direction.Normalize();
+    }
+
+    private void MoveTowardsPlayer()
+    {
+        prevPos = transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, chasingSpeed * Time.deltaTime);
+        direction = transform.position - prevPos;
+        direction.Normalize();
+        playerLastPosition = player.transform.position;
+    }
+
+    private void MoveTowardsPlayerLastPosition()
+    {
+        prevPos = transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, playerLastPosition, chasingSpeed * Time.deltaTime);
+        direction = transform.position - prevPos;
+        direction.Normalize();
     }
 
     private bool MouseOnSight()
