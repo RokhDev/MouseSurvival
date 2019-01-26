@@ -154,6 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5edd09fa295f5489648d3bb049db2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodGraphics:
+  - {fileID: 21300000, guid: 5509cc16dcea72a46953367e68d842ea, type: 3}
+  - {fileID: 21300000, guid: c538c81907d8bdf448acd4ece02c758c, type: 3}
+  - {fileID: 21300000, guid: e6386558b4f07ae429d4ebe3a21a47ad, type: 3}
+  - {fileID: 21300000, guid: 9f67b2bc2a1232544bae6e8b62e0c025, type: 3}
+  - {fileID: 21300000, guid: cdf69dcf125280e4a96865e42b56f1b8, type: 3}
 --- !u!212 &212914155619442388
 SpriteRenderer:
   m_ObjectHideFlags: 1

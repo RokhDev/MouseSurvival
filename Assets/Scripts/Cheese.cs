@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Cheese : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Sprite[] foodGraphics;
+
+    private SpriteRenderer r;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        r = GetComponent<Renderer>() as SpriteRenderer;
+        int picker = Random.Range(0, foodGraphics.Length);
+        r.sprite = foodGraphics[picker];
     }
 }
