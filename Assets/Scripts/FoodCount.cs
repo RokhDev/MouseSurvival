@@ -5,30 +5,32 @@ using UnityEngine;
 public class FoodCount : MonoBehaviour
 {
     GameObject[] findCheese;
+    GameObject findHome;
     int foodFound;
-    int loopFound;
+    // int loopFound;
 
     void Start()
     {
         findCheese = GameObject.FindGameObjectsWithTag("Cheese");
-        loopFound = 0;
-        for (int i = 0; i < findCheese.Length; i++)
+        findHome = GameObject.FindGameObjectWithTag("Home");
+        // loopFound = 0;
+        /*for (int i = 0; i < findCheese.Length; i++)
         {
             if (findCheese[i].activeSelf)
             {
                 loopFound++;
             }
-        }
-        foodFound = loopFound;
+        }*/
+        foodFound = findCheese.Length;
     }
 
     void Update()
     {
-        RefreshCount();
+        // RefreshCount();
         CheckVictory();
     }
 
-    void RefreshCount()
+    /*void RefreshCount()
     {
         loopFound = 0;
         for (int i = 0; i < findCheese.Length; i++)
@@ -39,10 +41,10 @@ public class FoodCount : MonoBehaviour
             }
         }
         foodFound = loopFound;
-    }
+    }*/
     void CheckVictory()
     {
-        if (foodFound <= 0)
+        if (findHome.GetComponent<Home>().GetScore() >= foodFound)
         {
             Debug.Log("Victory");
         }
