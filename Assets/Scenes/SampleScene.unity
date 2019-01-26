@@ -402,14 +402,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
-  patrolSpeed: 0
-  chasingSpeed: 0
-  idleTime: 0
-  wpProximityTreshold: 0
+    m_Bits: 256
+  patrolSpeed: 5
+  chasingSpeed: 5
+  idleTime: 2
+  wpProximityTreshold: 0.1
 --- !u!212 &1040915682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -445,15 +445,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1040915683
@@ -463,8 +463,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1040915680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.95903784, y: -0.10786839, z: -3.4746094}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.59, y: 2.07, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
