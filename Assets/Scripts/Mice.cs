@@ -11,7 +11,7 @@ public class Mice : MonoBehaviour
     private float originalWallAlpha = 0;
     private Collider2D lastWallHit;
 
-    Animator animation;
+    Animator anim;
     [SerializeField]
     RuntimeAnimatorController front;
     [SerializeField]
@@ -30,20 +30,20 @@ public class Mice : MonoBehaviour
 
     void Start()
     {
-        animation = GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>();
         playerTransform = GetComponent<Transform>();
         movementVector = new Vector3();
         x = 0;
         y = 0;
         foodCount = 0;
-        animation.enabled = false;
+        anim.enabled = false;
     }
 
     void Update()
     {
         PlayerMove();
-        AnimationBehaviour();
         WallTransparency();
+        AnimationBehaviour();
     }
 
     public void PlayerMove()
@@ -85,27 +85,27 @@ public class Mice : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            animation.enabled = true;
+            anim.enabled = true;
         }
         else
         {
-            animation.enabled = false;
+            anim.enabled = false;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            animation.runtimeAnimatorController = front;
+            anim.runtimeAnimatorController = front;
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
-            animation.runtimeAnimatorController = back;
+            anim.runtimeAnimatorController = back;
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
-            animation.runtimeAnimatorController = left;
+            anim.runtimeAnimatorController = left;
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
-            animation.runtimeAnimatorController = right;
+            anim.runtimeAnimatorController = right;
         }
     }
 
@@ -119,6 +119,7 @@ public class Mice : MonoBehaviour
         Collider2D[] hit = Physics2D.OverlapPointAll(new Vector2(transform.position.x, transform.position.y), wallLayer);
         if (hit.Length > 0)
         {
+            Debug.Log("Detectando hits");
             if (lastWallHit)
             {
                 SpriteRenderer lsr = lastWallHit.gameObject.GetComponent<Renderer>() as SpriteRenderer;
