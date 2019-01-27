@@ -25,6 +25,16 @@ public class Cat : MonoBehaviour {
     public float searchProximityTreshold;
     public float playerProximityTreshold;
 
+    Animator anim;
+    [SerializeField]
+    RuntimeAnimatorController front;
+    [SerializeField]
+    RuntimeAnimatorController back;
+    [SerializeField]
+    RuntimeAnimatorController left;
+    [SerializeField]
+    RuntimeAnimatorController right;
+
     private States state;
     private float chasingSpeed;
     private Waypoint currentTgtWaypoint;
@@ -39,6 +49,7 @@ public class Cat : MonoBehaviour {
     {
         currentTgtWaypoint = FindClosest();
         chasingSpeed = patrolSpeed;
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -68,6 +79,8 @@ public class Cat : MonoBehaviour {
         }
         else if(state == States.Idle)
         {
+            if (anim.enabled)
+                anim.enabled = false;
             if(idleTimer > 0)
             {
                 idleTimer -= Time.deltaTime;
@@ -112,6 +125,8 @@ public class Cat : MonoBehaviour {
             }
             else
             {
+                if (anim.enabled)
+                    anim.enabled = false;
                 searchTimer -= Time.deltaTime;
                 if(searchTimer <= 0)
                 {
@@ -170,6 +185,7 @@ public class Cat : MonoBehaviour {
         if (hit.Length > 0)
             return false;
 
+        playerLastPosition = player.transform.position;
         return true;
     }
 
@@ -177,25 +193,47 @@ public class Cat : MonoBehaviour {
     {
         prevPos = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, currentTgtWaypoint.transform.position, patrolSpeed * Time.deltaTime);
-        direction = transform.position - prevPos;
-        direction.Normalize();
+        direction = currentTgtWaypoint.transform.position;
+        UpdateAnimationSheet();
     }
 
     private void MoveTowardsPlayer()
     {
         prevPos = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, chasingSpeed * Time.deltaTime);
-        direction = transform.position - prevPos;
-        direction.Normalize();
-        playerLastPosition = player.transform.position;
+        direction = player.transform.position;
+        UpdateAnimationSheet();
     }
 
     private void MoveTowardsPlayerLastPosition()
     {
         prevPos = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, playerLastPosition, chasingSpeed * Time.deltaTime);
-        direction = transform.position - prevPos;
-        direction.Normalize();
+        direction = playerLastPosition;
+        UpdateAnimationSheet();
+    }
+
+    private void UpdateAnimationSheet()
+    {
+        if (!anim.enabled)
+            anim.enabled = true;
+        Vector3 quadrant = Magic.MathS.GetQuadrantToDirection(prevPos, direction);
+        if(quadrant == Vector3.right)
+        {
+            anim.runtimeAnimatorController = right;
+        }
+        if (quadrant == Vector3.left)
+        {
+            anim.runtimeAnimatorController = left;
+        }
+        if (quadrant == Vector3.up)
+        {
+            anim.runtimeAnimatorController = back;
+        }
+        if (quadrant == Vector3.down)
+        {
+            anim.runtimeAnimatorController = front;
+        }
     }
 
     private void CheckPlayerProximity()
