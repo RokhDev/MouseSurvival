@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Mice : MonoBehaviour
 {
+    public LayerMask wallLayer;
+    [Range(0.0f,1.0f)]
+    public float transparentWallAlpha;
+
+    private float originalWallAlpha = 0;
+    private Collider2D lastWallHit;
+
     Transform playerTransform;
     Vector3 movementVector;
     int x;
@@ -24,6 +31,7 @@ public class Mice : MonoBehaviour
     void Update()
     {
         PlayerMove();
+        WallTransparency();
     }
 
     public void PlayerMove()
@@ -66,6 +74,29 @@ public class Mice : MonoBehaviour
         return foodCount;
     }
 
+    public void WallTransparency()
+    {
+        Collider2D[] hit = Physics2D.OverlapPointAll(new Vector2(transform.position.x, transform.position.y), wallLayer);
+        if (hit.Length > 0)
+        {
+            lastWallHit = hit[0];
+            SpriteRenderer sr = hit[0].gameObject.GetComponent<Renderer>() as SpriteRenderer;
+            if(originalWallAlpha == 0)
+                originalWallAlpha = sr.color.a;
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, transparentWallAlpha);
+        }
+        else
+        {
+            if (lastWallHit)
+            {
+                SpriteRenderer sr = lastWallHit.gameObject.GetComponent<Renderer>() as SpriteRenderer;
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, originalWallAlpha);
+                lastWallHit = null;
+                originalWallAlpha = 0;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Cheese")
@@ -73,7 +104,6 @@ public class Mice : MonoBehaviour
             foodCount += 1;
             other.enabled = false;
             other.gameObject.SetActive(false);
-            Debug.Log("Food Count = " + foodCount);
         }
 
         if (other.tag == "Home")
@@ -82,8 +112,6 @@ public class Mice : MonoBehaviour
             {
                 other.gameObject.GetComponent<Home>().SumScore(foodCount);
                 foodCount = 0;
-                Debug.Log("Food Count = " + foodCount);
-                Debug.Log("Total Score = " + other.gameObject.GetComponent<Home>().GetScore());
             }
         }
     }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    Canvas canvas;
     [SerializeField]
     public Text score;
     [SerializeField]
@@ -16,7 +15,6 @@ public class UI : MonoBehaviour
 
     void Start()
     {
-        canvas = GetComponent<Canvas>();
         homeBh = GameObject.FindGameObjectWithTag("Home").GetComponent<Home>();
         foodCountBh = GameObject.FindGameObjectWithTag("FoodCount").GetComponent<FoodCount>();
     }
