@@ -79,6 +79,11 @@ public class Mice : MonoBehaviour
         Collider2D[] hit = Physics2D.OverlapPointAll(new Vector2(transform.position.x, transform.position.y), wallLayer);
         if (hit.Length > 0)
         {
+            if (lastWallHit)
+            {
+                SpriteRenderer lsr = lastWallHit.gameObject.GetComponent<Renderer>() as SpriteRenderer;
+                lsr.color = new Color(lsr.color.r, lsr.color.g, lsr.color.b, originalWallAlpha);
+            }
             lastWallHit = hit[0];
             SpriteRenderer sr = hit[0].gameObject.GetComponent<Renderer>() as SpriteRenderer;
             if(originalWallAlpha == 0)
