@@ -103,7 +103,9 @@ public class Cat : MonoBehaviour {
             }
             else
             {
-                Camera.main.GetComponent<CameraBehaviour>().SetAudioClip(Camera.main.GetComponent<CameraBehaviour>().patrol);
+                CameraBehaviour camBehav = Camera.main.GetComponent<CameraBehaviour>();
+                if (camBehav.GetAudioSource().clip != camBehav.patrol)
+                    camBehav.SetAudioClip(Camera.main.GetComponent<CameraBehaviour>().patrol);
                 audioSource.clip = ronroneo;
                 audioSource.Play();
                 int picker = Random.Range(0, currentTgtWaypoint.adjacents.Length);

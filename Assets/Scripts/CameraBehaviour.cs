@@ -25,4 +25,9 @@ public class CameraBehaviour : MonoBehaviour {
         audioMusa.clip = coso;
         audioMusa.Play();
     }
+
+    public AudioSource GetAudioSource()
+    {
+        return audioMusa;
+    }
 }

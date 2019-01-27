@@ -1459,6 +1459,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &398483643
@@ -1985,6 +1986,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &518782587
@@ -3244,6 +3246,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &913858312
@@ -3816,6 +3819,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &971873130
@@ -4373,6 +4377,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1129112010
@@ -4431,6 +4436,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1161075723
@@ -5417,6 +5423,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1344272334 stripped
@@ -6284,6 +6291,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1611577340 stripped
@@ -7473,6 +7481,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1860805143
@@ -7654,6 +7663,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114712627948310808, guid: 2ceb9ace1ec5ddf48a301cf4d90d5b7f,
+        type: 2}
+      propertyPath: queso
+      value: 
+      objectReference: {fileID: 8300000, guid: fee6f0c90752b714cb030cf2a3658dd6, type: 3}
+    - target: {fileID: 114712627948310808, guid: 2ceb9ace1ec5ddf48a301cf4d90d5b7f,
+        type: 2}
+      propertyPath: pasos
+      value: 
+      objectReference: {fileID: 8300000, guid: 2154fe75a38f2f24780ce29d468aac45, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ceb9ace1ec5ddf48a301cf4d90d5b7f, type: 2}
   m_IsPrefabAsset: 0
@@ -7789,6 +7808,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1919972827
@@ -9238,6 +9258,7 @@ Prefab:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 61080450667929258, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: af6322ae0d64fcb4191c7bf3486427dd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &2088259460 stripped

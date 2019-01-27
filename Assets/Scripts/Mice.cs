@@ -11,6 +11,8 @@ public class Mice : MonoBehaviour
     private float originalWallAlpha = 0;
     private Collider2D lastWallHit;
     AudioSource source;
+    public AudioClip pasos;
+    public AudioClip queso;
     Animator anim;
     [SerializeField]
     RuntimeAnimatorController front;
@@ -75,6 +77,8 @@ public class Mice : MonoBehaviour
             Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
             playerTransform.position += movementVector * Time.deltaTime * diagonalCos;
+            source.clip = pasos;
+            source.Play();
         }
         else
         {
@@ -150,6 +154,7 @@ public class Mice : MonoBehaviour
             foodCount += 1;
             other.enabled = false;
             other.gameObject.SetActive(false);
+            source.clip = queso;
             source.Play();
         }
 
