@@ -25,6 +25,12 @@ public class Cat : MonoBehaviour {
     public float searchProximityTreshold;
     public float playerProximityTreshold;
 
+    AudioSource audioSource;
+    public AudioClip patrullando;
+    public AudioClip persiguiendo;
+    public AudioClip pensando;
+    public AudioClip ronroneo;
+
     Animator anim;
     [SerializeField]
     RuntimeAnimatorController front;
@@ -47,6 +53,7 @@ public class Cat : MonoBehaviour {
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentTgtWaypoint = FindClosest();
         chasingSpeed = patrolSpeed;
         anim = GetComponentInChildren<Animator>();
@@ -67,6 +74,8 @@ public class Cat : MonoBehaviour {
             float distanceToTgtWp = Vector3.Distance(transform.position, currentTgtWaypoint.transform.position);
             if(distanceToTgtWp <= wpProximityTreshold)
             {
+                audioSource.clip = pensando;
+                audioSource.Play();
                 state = States.Idle;
                 idleTimer = idleTime;
             }
@@ -74,6 +83,9 @@ public class Cat : MonoBehaviour {
             //Cambio de Patroling a Chasing
             if (PlayerInSight())
             {
+                Camera.main.GetComponent<CameraBehaviour>().SetAudioClip(Camera.main.GetComponent<CameraBehaviour>().chase);
+                audioSource.clip = persiguiendo;
+                audioSource.Play();
                 state = States.Chasing;
                 chasingSpeed = patrolSpeed;
             }
@@ -91,6 +103,9 @@ public class Cat : MonoBehaviour {
             }
             else
             {
+                Camera.main.GetComponent<CameraBehaviour>().SetAudioClip(Camera.main.GetComponent<CameraBehaviour>().patrol);
+                audioSource.clip = ronroneo;
+                audioSource.Play();
                 int picker = Random.Range(0, currentTgtWaypoint.adjacents.Length);
                 currentTgtWaypoint = currentTgtWaypoint.adjacents[picker];
                 state = States.Patroling;
@@ -99,6 +114,9 @@ public class Cat : MonoBehaviour {
             //Cambio de Idle a Chasing
             if (PlayerInSight())
             {
+                Camera.main.GetComponent<CameraBehaviour>().SetAudioClip(Camera.main.GetComponent<CameraBehaviour>().chase);
+                audioSource.clip = persiguiendo;
+                audioSource.Play();
                 state = States.Chasing;
                 chasingSpeed = patrolSpeed;
             }

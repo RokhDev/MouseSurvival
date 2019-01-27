@@ -10,7 +10,7 @@ public class Mice : MonoBehaviour
 
     private float originalWallAlpha = 0;
     private Collider2D lastWallHit;
-
+    AudioSource source;
     Animator anim;
     [SerializeField]
     RuntimeAnimatorController front;
@@ -37,6 +37,7 @@ public class Mice : MonoBehaviour
         y = 0;
         foodCount = 0;
         anim.enabled = false;
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -149,6 +150,7 @@ public class Mice : MonoBehaviour
             foodCount += 1;
             other.enabled = false;
             other.gameObject.SetActive(false);
+            source.Play();
         }
 
         if (other.tag == "Home")
