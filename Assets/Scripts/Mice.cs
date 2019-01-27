@@ -10,6 +10,7 @@ public class Mice : MonoBehaviour
     int y;
     const int playerSpeed = 3;
     int foodCount;
+    const float diagonalCos = 0.7071067f;
 
     void Start()
     {
@@ -31,27 +32,33 @@ public class Mice : MonoBehaviour
         y = 0;
         if (Input.GetKey(KeyCode.W))
         {
-            x = 0;
             y = playerSpeed;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            x = 0;
             y = -playerSpeed;
         }
         if (Input.GetKey(KeyCode.A))
         {
             x = -playerSpeed;
-            y = 0;
         }
         if (Input.GetKey(KeyCode.D))
         {
             x = playerSpeed;
-            y = 0;
         }
         movementVector.x = x;
         movementVector.y = y;
-        playerTransform.position += movementVector * Time.deltaTime;
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D) ||
+            Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) ||
+            Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+        {
+            playerTransform.position += movementVector * Time.deltaTime * diagonalCos;
+        }
+        else
+        {
+            playerTransform.position += movementVector * Time.deltaTime;
+        }
     }
 
     public int GetFoodCount()
