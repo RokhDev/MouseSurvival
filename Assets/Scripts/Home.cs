@@ -11,11 +11,6 @@ public class Home : MonoBehaviour
         score = 0;
     }
 
-    void Update()
-    {
-        
-    }
-
     public void SumScore(int sum)
     {
         score += sum;

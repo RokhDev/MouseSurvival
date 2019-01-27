@@ -154,7 +154,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -934,7 +934,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3032,7 +3032,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5000,7 +5000,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5562,7 +5562,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5621,7 +5621,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.832, y: 1.76}
+    oldSize: {x: 1.5266666, y: 1.4666667}
     newSize: {x: 16.08, y: 10.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7753,8 +7753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bea88d0fba96849926863b2d49fe71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: {fileID: 608680905}
-  Carrying: {fileID: 180921756}
+  score: {fileID: 608680905}
+  carrying: {fileID: 180921756}
 --- !u!222 &1997445306
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -7,10 +7,9 @@ public class UI : MonoBehaviour
 {
     Canvas canvas;
     [SerializeField]
-    public Text Score;
+    public Text score;
     [SerializeField]
-    public Text Carrying;
-    // Text myText;
+    public Text carrying;
     private Home homeBh;
     private FoodCount foodCountBh;
     private Mice miceBh;
@@ -19,19 +18,33 @@ public class UI : MonoBehaviour
     {
         canvas = GetComponent<Canvas>();
         homeBh = GameObject.FindGameObjectWithTag("Home").GetComponent<Home>();
-        // mice = GameObject.FindGameObjectWithTag("Player");
         foodCountBh = GameObject.FindGameObjectWithTag("FoodCount").GetComponent<FoodCount>();
     }
 
     void Update()
     {
+        CheckMice();
+        ShowScore();
+        ShowFoodCarrying();
+    }
+
+    void CheckMice()
+    {
         if (!miceBh)
         {
             miceBh = Globals.player.GetComponent<Mice>();
         }
-        Score.text = "Carrying " +  miceBh.GetFoodCount() + " / " + foodCountBh.GetFoodFound(); 
-        Score.color = Color.blue;
-        Carrying.text = "Score " + homeBh.GetScore();
-        Carrying.color = Color.red;
+    }
+
+    void ShowScore()
+    {
+        score.text = "Score " + homeBh.GetScore() + " / " + foodCountBh.GetFoodFound();
+        score.color = Color.blue;
+    }
+
+    void ShowFoodCarrying()
+    {
+        carrying.text = "Carrying " + miceBh.GetFoodCount();
+        carrying.color = Color.red;
     }
 }
