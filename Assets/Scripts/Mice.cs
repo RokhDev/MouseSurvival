@@ -11,6 +11,15 @@ public class Mice : MonoBehaviour
     private float originalWallAlpha = 0;
     private Collider2D lastWallHit;
 
+    Animator animation;
+    [SerializeField]
+    RuntimeAnimatorController front;
+    [SerializeField]
+    RuntimeAnimatorController back;
+    [SerializeField]
+    RuntimeAnimatorController left;
+    [SerializeField]
+    RuntimeAnimatorController right;
     Transform playerTransform;
     Vector3 movementVector;
     int x;
@@ -21,16 +30,19 @@ public class Mice : MonoBehaviour
 
     void Start()
     {
+        animation = GetComponentInChildren<Animator>();
         playerTransform = GetComponent<Transform>();
         movementVector = new Vector3();
         x = 0;
         y = 0;
         foodCount = 0;
+        animation.enabled = false;
     }
 
     void Update()
     {
         PlayerMove();
+        AnimationBehaviour();
         WallTransparency();
     }
 
@@ -66,6 +78,34 @@ public class Mice : MonoBehaviour
         else
         {
             playerTransform.position += movementVector * Time.deltaTime;
+        }
+    }
+
+    public void AnimationBehaviour()
+    {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            animation.enabled = true;
+        }
+        else
+        {
+            animation.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            animation.runtimeAnimatorController = front;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            animation.runtimeAnimatorController = back;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            animation.runtimeAnimatorController = left;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            animation.runtimeAnimatorController = right;
         }
     }
 
