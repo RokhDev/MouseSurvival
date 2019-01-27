@@ -7654,6 +7654,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114712627948310808, guid: 2ceb9ace1ec5ddf48a301cf4d90d5b7f,
+        type: 2}
+      propertyPath: queso
+      value: 
+      objectReference: {fileID: 8300000, guid: fee6f0c90752b714cb030cf2a3658dd6, type: 3}
+    - target: {fileID: 114712627948310808, guid: 2ceb9ace1ec5ddf48a301cf4d90d5b7f,
+        type: 2}
+      propertyPath: pasos
+      value: 
+      objectReference: {fileID: 8300000, guid: 2154fe75a38f2f24780ce29d468aac45, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ceb9ace1ec5ddf48a301cf4d90d5b7f, type: 2}
   m_IsPrefabAsset: 0
