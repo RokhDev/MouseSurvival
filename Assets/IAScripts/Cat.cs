@@ -63,6 +63,7 @@ public class Cat : MonoBehaviour {
         {
             MoveTowardsWaypoint();
 
+            //Cambio de Patroling a Idle
             float distanceToTgtWp = Vector3.Distance(transform.position, currentTgtWaypoint.transform.position);
             if(distanceToTgtWp <= wpProximityTreshold)
             {
@@ -70,6 +71,7 @@ public class Cat : MonoBehaviour {
                 idleTimer = idleTime;
             }
 
+            //Cambio de Patroling a Chasing
             if (PlayerInSight())
             {
                 state = States.Chasing;
@@ -81,6 +83,8 @@ public class Cat : MonoBehaviour {
         {
             if (anim.enabled)
                 anim.enabled = false;
+
+            //Cambio de Idle a Patroling
             if(idleTimer > 0)
             {
                 idleTimer -= Time.deltaTime;
@@ -92,6 +96,7 @@ public class Cat : MonoBehaviour {
                 state = States.Patroling;
             }
 
+            //Cambio de Idle a Chasing
             if (PlayerInSight())
             {
                 state = States.Chasing;
@@ -104,6 +109,7 @@ public class Cat : MonoBehaviour {
 
             CheckPlayerProximity();
 
+            //Cambio de Chasing a Searching
             if (PlayerInSight())
             {
                 if(Vector3.Distance(transform.position, player.transform.position) > playerProximityTreshold)
@@ -119,6 +125,7 @@ public class Cat : MonoBehaviour {
         {
             chasingSpeed += acceleration * Time.deltaTime;
 
+            //Cambio de Searching a Patroling
             if(Vector3.Distance(transform.position, playerLastPosition) > searchProximityTreshold)
             {
                 MoveTowardsPlayerLastPosition();
@@ -135,6 +142,7 @@ public class Cat : MonoBehaviour {
                 }
             }
 
+            //Cambio de Searching a Chasing
             if (PlayerInSight())
             {
                 state = States.Chasing;
